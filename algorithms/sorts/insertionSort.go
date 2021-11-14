@@ -3,18 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	array := []int{1, 5, 2, 6, 54, 32, 121, 43, 32}
-	insertionSort(array)
-	fmt.Println(array)
+	slice := []int{1, 5, 2, 6, 54, 32, 121, 43, 32}
+	insertionSort(slice)
+	fmt.Println(slice)
 }
 
-func insertionSort(array []int) {
-	for partIndex := 1; partIndex < len(array); partIndex++ {
-		curUnsorted := array[partIndex]
+func insertionSort(slice []int) {
+	for partIndex := 1; partIndex < len(slice); partIndex++ {
+		curUnsorted := slice[partIndex]
 		i := 0
-		for i = partIndex; i > 0 && array[i-1] > array[i]; i-- {
-			array[i-1], array[i] = array[i], array[i-1]
+		for i = partIndex; i > 0 && slice[i-1] > slice[i]; i-- {
+			slice[i-1], slice[i] = slice[i], slice[i-1]
 		}
-		array[i] = curUnsorted
+		slice[i] = curUnsorted
 	}
 }
