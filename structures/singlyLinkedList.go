@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type singlyLinkedList struct {
-	singlyLinkedListable
+	LinkedListable
 	head  *node
 	tail  *node
 	count int
@@ -18,7 +18,7 @@ func newSinglyLinkedList() singlyLinkedList {
 	return singlyLinkedList{}
 }
 
-type singlyLinkedListable interface {
+type LinkedListable interface {
 	addFirst(value interface{})
 	addLast(value interface{})
 	removeFirst()
