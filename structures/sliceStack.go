@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 type sliceStack struct {
+	Stackable
 	items []interface{}
 }
 
