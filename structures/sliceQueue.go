@@ -25,7 +25,7 @@ func (q *sliceQueue) dequeue() {
 	if len(q.items) == 0 {
 		panic("invalid operation `dequeue` for empty queue")
 	}
-	q.items = q.items[1:len(q.items)]
+	q.items = q.items[1:]
 }
 
 func (q *sliceQueue) peek() interface{} {
