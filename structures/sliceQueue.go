@@ -36,14 +36,14 @@ func (q *sliceQueue) peek() interface{} {
 }
 
 func main() {
-	stack := newSliceQueue(8)
+	queue := newSliceQueue(8)
 
-	stack.enqueue(6)
-	stack.enqueue(10)
+	queue.enqueue(6)
+	queue.enqueue(10)
 
-	fmt.Println(stack.peek())
+	fmt.Println(queue.peek())
 
-	stack.dequeue()
+	queue.dequeue()
 
-	fmt.Println(stack.peek())
+	fmt.Println(queue.peek())
 }
